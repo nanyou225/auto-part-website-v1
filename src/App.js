@@ -1,10 +1,13 @@
-
+import { Navbar } from "./components";
+import { BrowserRouter } from "react-router-dom";
+import GlobalStyle from "./globalStyles";
 
 function App() {
   return (
-    <div className="App">
-    <h1>Hello world</h1>
-    </div>
+    <BrowserRouter>
+      <GlobalStyle />
+      <Navbar />
+    </BrowserRouter>
   );
 }
 
