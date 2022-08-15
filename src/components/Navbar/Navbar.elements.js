@@ -53,11 +53,12 @@ export const NavMenu = styled.ul`
   align-self: center;
   list-style: none;
   text-align: center;
+
   @media screen and (max-width: 960px) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90%;
+    height: 95vh;
     position: absolute;
     top: 80px;
     left: ${({ click }) => (click ? 0 : "-100%")};
@@ -79,9 +80,10 @@ export const NavItem = styled.li`
     width: 100%;
   }
 `;
-export const NavSearch = styled.li`
+export const NavSearch = styled.nav`
   align-self: center;
-  margin-right: 3rem;
+  margin-right: 10rem;
+  
   .search-box {
     border-radius: 20px;
     border: none;
@@ -89,12 +91,15 @@ export const NavSearch = styled.li`
     padding: 5px;
     width: 33rem;
     line-height: 30px;
-    margin-right: 8rem;
     font-size: 17px;
   }
 
-  @media screen and (max-width: 960px) {
-    width: 100%;
+  @media (max-width: 728px) {
+    flex-direction: column;
+
+    &:hover {
+      border: none;
+    }
   }
 `;
 

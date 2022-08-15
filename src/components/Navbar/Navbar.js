@@ -32,24 +32,20 @@ const Navbar = ({ onSearchChange }) => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-
-            <NavMenu onClick={handleClick}>
-              <NavSearch>
-                <SearchBox
-                  className="search-box"
-                  onChangeHandler={onSearchChange}
-                  placeholder="Rechercher un produit, une réference ou une marque"
-                />
-              </NavSearch>
-
+            <NavSearch>
+              <SearchBox
+                className="search-box"
+                onChangeHandler={onSearchChange}
+                placeholder="Rechercher un produit, une réference ou une marque"
+              />
+            </NavSearch>
+            <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLink to="/contact">Contact</NavLink>
               </NavItem>
-
               <NavItem>
                 <NavLink to="/connexion">Connexion</NavLink>
               </NavItem>
-
               <NavItem>
                 <NavLink to="/panier">Panier</NavLink>
               </NavItem>
