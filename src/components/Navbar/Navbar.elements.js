@@ -83,7 +83,7 @@ export const NavItem = styled.li`
 export const NavSearch = styled.nav`
   align-self: center;
   margin-right: 10rem;
-  
+
   .search-box {
     border-radius: 20px;
     border: none;

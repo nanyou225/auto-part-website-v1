@@ -1,0 +1,60 @@
+[
+    {
+        "id": 1,
+        "title": "Pièces moteur",
+        "thumbnail": "/url",
+        "category_list": [
+            "Courroies et Distribution",
+            "Refroidissement moteur",
+            "Injection carburant",
+            "Bougie et Pièces d'allumage",
+            "Turbo"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Filtres et huile",
+        "thumbnail": "/url",
+        "category_list": [
+            "Filtres",
+            "Huile : Accessoires vidange",
+            "Outils vidange",
+            "Autres Pièces de Filtration",
+            "Turbo"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Direction / Suspension / Train",
+        "thumbnail": "/url",
+        "category_list": [
+            "Amortisseurs",
+            "Suspenssion d'essieux",
+            "Transmission",
+            "Rotules / Direction",
+            "Moyeux et Roulements"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Freinage",
+        "thumbnail": "/url",
+        "category_list": [
+            "Plaquettes de frein",
+            "Disques de frein",
+            "Hydraulique",
+            "Freins à tambours",
+            "Capteur de câbles de freinage"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Embrayage et Boîte de vitesse",
+        "thumbnail": "/url",
+        "category_list": [
+            "Embrayage et ;Volant-moteur",
+            "Accessoires de boîte de vitesse",
+            "Autres pièces d'embrayage"
+        ]
+    }
+]
