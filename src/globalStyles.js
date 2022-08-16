@@ -6,6 +6,11 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
 }
+
+body{
+  background-color: ${({ theme }) => theme.colors.body};
+}
+
 `;
 
 export const Container = styled.div`
@@ -24,4 +29,3 @@ export const Container = styled.div`
 `;
 
 export default GlobalStyle;
-

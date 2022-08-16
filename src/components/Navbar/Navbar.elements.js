@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
-  background: #29323c;
+  background-color: ${({ theme }) => theme.colors.Navbar};
   height: 80px;
   display: flex;
   justify-content: center;
@@ -122,4 +122,8 @@ export const NavLink = styled(Link)`
       transition: all 0.3s ease;
     }
   }
+`;
+
+export const StyleCatalog = styled.ul`
+  background: ${({ theme }) => theme.colors.NavbarCatalog};
 `;

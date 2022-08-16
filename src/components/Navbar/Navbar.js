@@ -25,7 +25,7 @@ const Navbar = ({ onSearchChange }) => {
         <Nav>
           <NavbarContainer>
             <NavLogo to="/">
-              <NavIcon />
+            <NavIcon />
               N_AUTO
             </NavLogo>
 
