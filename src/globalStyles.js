@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
 body{
   background-color: ${({ theme }) => theme.colors.body};
 }
-
 `;
 
 export const Container = styled.div`
@@ -22,7 +21,7 @@ export const Container = styled.div`
   padding-right: 50px;
   padding-left: 50px;
 
-  @media screen and (max-width: 991px) {
+  @media screen and (max-width: 500px) {
     padding-right: 30px;
     padding-left: 30px;
   }

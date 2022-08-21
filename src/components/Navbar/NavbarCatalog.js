@@ -1,21 +1,15 @@
-import React from "react";
-import Products from "../../products.json";
 import Categories from "../../categories.json";
 import { StyleCatalog } from "./Navbar.elements";
 
 export default function NavbarCatalog() {
   return (
     <StyleCatalog>
-      <ul>
+      <ul className="Catalogue">
         {Categories &&
           Categories.map((category) => {
-            return <li key={category.id}>---{category.title}---</li>;
-          })}
-        {Products &&
-          Products.map((product) => {
             return (
-              <div key={product.id}>
-                <li>{product.title}</li>
+              <div key={category.id} className="categoy_li">
+                <li>{category.title}</li>
               </div>
             );
           })}
@@ -23,3 +17,10 @@ export default function NavbarCatalog() {
     </StyleCatalog>
   );
 }
+
+// const filterItemsToDisplayForCatalog = () => {
+//   if(){}
+//   if(){}
+//   if(){}
+//   if(){}
+// }

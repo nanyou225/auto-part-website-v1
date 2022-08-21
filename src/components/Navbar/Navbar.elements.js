@@ -81,6 +81,7 @@ export const NavItem = styled.li`
   }
 `;
 export const NavSearch = styled.nav`
+  flex: 1;
   align-self: center;
   margin-right: 10rem;
 
@@ -92,14 +93,11 @@ export const NavSearch = styled.nav`
     width: 33rem;
     line-height: 30px;
     font-size: 17px;
+    margin-left: 30px;
   }
 
-  @media (max-width: 728px) {
-    flex-direction: column;
-
-    &:hover {
-      border: none;
-    }
+  @media (max-width: 1160px) {
+    margin: 1rem;
   }
 `;
 
@@ -124,6 +122,24 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const StyleCatalog = styled.ul`
-  background: ${({ theme }) => theme.colors.NavbarCatalog};
+export const StyleCatalog = styled.div`
+  background-color: ${({ bg }) => bg || "#2980b9"};
+  height: auto;
+  /* height: 45px; */
+  line-height: 45px;
+  font-size: 18px;
+  align-items: center;
+
+  .categoy_li {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    padding: 0 12px;
+    color: #fff;
+
+    &:hover {
+      color: #fb3d28;
+      transition: all 0.3s ease;
+    }
+  }
 `;
