@@ -74,10 +74,13 @@ export const NavItem = styled.li`
 
   &:hover {
     border-bottom: 2px solid #fb3d28;
+    width: auto;
   }
 
   @media screen and (max-width: 960px) {
     width: 100%;
+    height: 100%;
+    margin: auto;
   }
 `;
 export const NavSearch = styled.nav`
@@ -94,10 +97,6 @@ export const NavSearch = styled.nav`
     line-height: 30px;
     font-size: 17px;
     margin-left: 30px;
-  }
-
-  @media (max-width: 1160px) {
-    margin: 1rem;
   }
 `;
 

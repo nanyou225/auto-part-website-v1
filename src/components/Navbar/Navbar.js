@@ -25,21 +25,22 @@ const Navbar = ({ onSearchChange }) => {
         <Nav>
           <NavbarContainer>
             <NavLogo to="/">
-            <NavIcon />
+              <NavIcon />
               N_AUTO
             </NavLogo>
 
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <NavSearch>
-              <SearchBox
-                className="search-box"
-                onChangeHandler={onSearchChange}
-                placeholder="Rechercher un produit, une réference ou une marque"
-              />
-            </NavSearch>
+
             <NavMenu onClick={handleClick} click={click}>
+              <NavSearch>
+                <SearchBox
+                  className="search-box"
+                  onChangeHandler={onSearchChange}
+                  placeholder="Rechercher un produit, une réference ou une marque"
+                />
+              </NavSearch>
               <NavItem>
                 <NavLink to="/contact">Contact</NavLink>
               </NavItem>
