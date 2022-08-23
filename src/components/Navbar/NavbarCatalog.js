@@ -1,26 +1,37 @@
+import { Link } from "react-router-dom";
 import Categories from "../../categories.json";
-import { StyleCatalog } from "./Navbar.elements";
+import CategoryCpy from "../../categoryCpy.json";
+import { CatalogContainer, CatalogDiv } from "./Navbar.elements";
 
 export default function NavbarCatalog() {
   return (
-    <StyleCatalog>
-      <ul className="Catalogue">
-        {Categories &&
-          Categories.map((category) => {
-            return (
-              <div key={category.id} className="categoy_li">
-                <li>{category.title}</li>
-              </div>
-            );
-          })}
-      </ul>
-    </StyleCatalog>
+    <CatalogDiv className="header-cat-menu">
+      <CatalogContainer>
+        <div>
+          <div className="header-cat-text">
+            <Link to="/">CATEGORIE</Link>
+          </div>
+          <ul>
+            {Categories &&
+              Categories.map((category) => {
+                return <li key={category.id}>{category.title}</li>;
+              })}
+          </ul>
+        </div>
+        <div className="header-catCpy-text">
+          <ul>
+            {CategoryCpy &&
+              CategoryCpy.map((categoryCpy) => {
+                return (
+                  <li key={categoryCpy.id}>
+                    {categoryCpy.image}
+                    {categoryCpy.title}
+                  </li>
+                );
+              })}
+          </ul>
+        </div>
+      </CatalogContainer>
+    </CatalogDiv>
   );
 }
-
-// const filterItemsToDisplayForCatalog = () => {
-//   if(){}
-//   if(){}
-//   if(){}
-//   if(){}
-// }

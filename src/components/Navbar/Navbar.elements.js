@@ -121,24 +121,38 @@ export const NavLink = styled(Link)`
   }
 `;
 
-export const StyleCatalog = styled.div`
-  background-color: ${({ bg }) => bg || "#2980b9"};
+export const CatalogContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
   height: auto;
-  /* height: 45px; */
-  line-height: 45px;
-  font-size: 18px;
-  align-items: center;
 
-  .categoy_li {
-    display: inline-block;
-    list-style: none;
-    cursor: pointer;
-    padding: 0 12px;
-    color: #fff;
+  ${Container}
+`;
 
-    &:hover {
-      color: #fb3d28;
-      transition: all 0.3s ease;
-    }
+export const CatalogDiv = styled.div`
+  background-color: ${({ theme }) => theme.colors.Catalogue};
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  color: #fff;
+
+  .header-cat-text{
+    display: flex;
+    margin: 0 5px;
+  }
+
+  ul {
+    display: none;
+    background-color: greenyellow;
+  }
+
+  .header-catCpy-text ul {
+    display: flex;
+    justify-content: space-between;
+    background-color: green;
+    align-items: center;
+  }
+  .header-catCpy-text ul li {
+    margin: 0 35px;
   }
 `;
