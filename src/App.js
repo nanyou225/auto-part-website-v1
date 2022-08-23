@@ -9,7 +9,7 @@ const theme = {
     GlobalStyle: "black",
     Navbar: "#29323c",
     body: "#E8E8E8",
-    // Catalogue: "#2980b9",
+    Catalogue: "#2980b9",
     Footer: "#29323c",
   },
 };
