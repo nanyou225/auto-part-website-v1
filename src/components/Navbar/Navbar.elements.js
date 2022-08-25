@@ -123,36 +123,57 @@ export const NavLink = styled(Link)`
 
 export const CatalogContainer = styled(Container)`
   display: flex;
-  justify-content: space-between;
   height: auto;
-
+  align-items: center;
   ${Container}
 `;
 
 export const CatalogDiv = styled.div`
   background-color: ${({ theme }) => theme.colors.Catalogue};
   display: flex;
-  padding: 8px;
-  justify-content: space-between;
-  color: #fff;
+  /* padding: 8px; */
 
-  .header-cat-text{
-    display: flex;
-    margin: 0 5px;
-  }
-
-  ul {
-    display: none;
-    background-color: greenyellow;
-  }
-
-  .header-catCpy-text ul {
-    display: flex;
+  .header-catCpy-text li {
+    padding: 0 15px;
+    display: inline-flex;
     justify-content: space-between;
-    background-color: green;
-    align-items: center;
   }
-  .header-catCpy-text ul li {
-    margin: 0 35px;
+  a {
+    color: #fff;
+  }
+
+  .header-cat-text {
+    padding: 0;
+    list-style: none;
+  }
+
+  .header-cat-text li {
+    display: block;
+    position: relative;
+    line-height: 21px;
+    text-align: left;
+  }
+  .header-cat-text li a {
+    display: block;
+    padding: 8px 25px;
+    text-decoration: none;
+    color: #333;
+  }
+  .header-cat-text li a:hover {
+    background: #939393;
+  }
+
+  .header-cat-text li ul.dropdown {
+    min-width: 100%;
+    background: #f3f3f3;
+    top: 37px;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+  }
+  .header-cat-text li:hover ul.dropdown {
+    display: block;
+    width: 75rem;
   }
 `;

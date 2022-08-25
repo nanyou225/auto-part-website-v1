@@ -7,30 +7,34 @@ export default function NavbarCatalog() {
   return (
     <CatalogDiv className="header-cat-menu">
       <CatalogContainer>
-        <div>
-          <div className="header-cat-text">
-            <Link to="/">CATEGORIE</Link>
-          </div>
-          <ul>
-            {Categories &&
-              Categories.map((category) => {
-                return <li key={category.id}>{category.title}</li>;
-              })}
-          </ul>
-        </div>
-        <div className="header-catCpy-text">
-          <ul>
-            {CategoryCpy &&
-              CategoryCpy.map((categoryCpy) => {
-                return (
-                  <li key={categoryCpy.id}>
+        <ul className="header-cat-text">
+          <li>
+            <Link to="/catalogue">CATEGORIE</Link>
+            <ul className="dropdown">
+              {Categories &&
+                Categories.map((category) => {
+                  return (
+                    <li key={category.id}>
+                      <Link to="/category_item">{category.title}</Link>
+                    </li>
+                  );
+                })}
+            </ul>
+          </li>
+        </ul>
+        <ul className="header-catCpy-text">
+          {CategoryCpy &&
+            CategoryCpy.map((categoryCpy) => {
+              return (
+                <li key={categoryCpy.id}>
+                  <Link to="/categoryCpy">
                     {categoryCpy.image}
                     {categoryCpy.title}
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
+                  </Link>
+                </li>
+              );
+            })}
+        </ul>
       </CatalogContainer>
     </CatalogDiv>
   );
