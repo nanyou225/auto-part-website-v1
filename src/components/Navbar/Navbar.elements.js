@@ -70,6 +70,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
+  letter-spacing: 2px;
   border-bottom: 2px solid transparent;
 
   &:hover {
@@ -93,10 +94,16 @@ export const NavSearch = styled.nav`
     border: none;
     outline: none;
     padding: 5px;
-    width: 33rem;
+    width: 32rem;
     line-height: 30px;
     font-size: 17px;
-    margin-left: 30px;
+    margin-left: 25px;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    height: 100%;
+    margin: auto;
   }
 `;
 
@@ -125,13 +132,13 @@ export const CatalogContainer = styled(Container)`
   display: flex;
   height: auto;
   align-items: center;
+  z-index: 999;
   ${Container}
 `;
 
 export const CatalogDiv = styled.div`
   background-color: ${({ theme }) => theme.colors.Catalogue};
   display: flex;
-  /* padding: 8px; */
 
   .header-catCpy-text li {
     padding: 0 15px;
@@ -140,6 +147,11 @@ export const CatalogDiv = styled.div`
   }
   a {
     color: #fff;
+    font-weight: 400;
+    &:hover {
+      color: #fb3d28;
+      transition: all 0.3s ease;
+    }
   }
 
   .header-cat-text {
@@ -159,13 +171,19 @@ export const CatalogDiv = styled.div`
     text-decoration: none;
     color: #333;
   }
+  .header-cat-text li .catalogue {
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
   .header-cat-text li a:hover {
-    background: #939393;
+    color: #fb3d28;
+    transition: all 0.3s ease;
   }
 
   .header-cat-text li ul.dropdown {
     min-width: 100%;
-    background: #f3f3f3;
+    background: #fff;
     top: 37px;
     display: none;
     position: absolute;
@@ -174,6 +192,7 @@ export const CatalogDiv = styled.div`
   }
   .header-cat-text li:hover ul.dropdown {
     display: block;
-    width: 75rem;
+    width: 78rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 `;

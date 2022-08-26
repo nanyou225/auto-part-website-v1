@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { FiLogIn, FiPhoneCall, FiShoppingCart } from "react-icons/fi";
 import { IconContext } from "react-icons/lib";
 import {
   MobileIcon,
@@ -42,13 +43,21 @@ const Navbar = ({ onSearchChange }) => {
                 />
               </NavSearch>
               <NavItem>
-                <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/contact">
+                  Contact
+                  <FiPhoneCall />
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/connexion">Connexion</NavLink>
+                <NavLink to="/connexion">
+                  Connexion
+                  <FiLogIn />
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/panier">Panier</NavLink>
+                <NavLink to="/panier">
+                  Panier <FiShoppingCart />
+                </NavLink>
               </NavItem>
             </NavMenu>
           </NavbarContainer>

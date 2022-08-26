@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import GlobalStyle from "./globalStyles";
 import NavbarCatalog from "./components/Navbar/NavbarCatalog";
 import { ThemeProvider } from "styled-components";
+import SelectApp from "./components/SelectCar/SelectCar";
 
 const theme = {
   colors: {
@@ -21,6 +22,7 @@ function App() {
         <GlobalStyle />
         <Navbar />
         <NavbarCatalog />
+        <SelectApp />
       </BrowserRouter>
     </ThemeProvider>
   );

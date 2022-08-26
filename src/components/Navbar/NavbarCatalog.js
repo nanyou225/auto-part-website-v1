@@ -9,7 +9,7 @@ export default function NavbarCatalog() {
       <CatalogContainer>
         <ul className="header-cat-text">
           <li>
-            <Link to="/catalogue">CATEGORIE</Link>
+            <Link to="/catalogue" className="catalogue">CATALOGUE</Link>
             <ul className="dropdown">
               {Categories &&
                 Categories.map((category) => {
