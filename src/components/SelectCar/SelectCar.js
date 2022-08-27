@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
 import data from "../../carSelect.json";
+import CarouselApp from "../Carousel/CarouselApp";
 import { SelectCar, SelectContainer } from "./SelectCar.elements";
 
 function SelectApp() {
@@ -33,50 +34,55 @@ function SelectApp() {
   return (
     <SelectContainer>
       <SelectCar>
-        <h2>Sélectionnant mon véhicule</h2>
-        <span>
-          <b>Link:</b> {country && lang ? link : "-"}
-        </span>
-        <h3>Par plaque d'immatriculation</h3>
-        <br />
-        <div className="immat">
-          <input type="text" placeholder="AB-325-CF" />
-        </div>
-        <br />
-        <br />
-        <h3>Par véhicule</h3>
-        <br />
-        <div style={{ width: 320, marginBottom: 20 }}>
-          <b>Marque</b>
-          <Select
-            placeholder="Selectionner la marque"
-            value={country}
-            options={data}
-            onChange={handleCountryChange}
-            getOptionLabel={(x) => x.car}
-            getOptionValue={(x) => x.car_code}
-          />
+        <div>
+          <h2>Sélectionnant mon véhicule</h2>
+          <span>
+            <b>Link:</b> {country && lang ? link : "-"}
+          </span>
+          <h3>Par plaque d'immatriculation</h3>
+          <br />
+          <div className="immat">
+            <input type="text" placeholder="AB-325-CF" />
+          </div>
+          <br />
+          <br />
+          <h3>Par véhicule</h3>
+          <br />
+          <div style={{ width: 320, marginBottom: 20 }}>
+            <b>Marque</b>
+            <Select
+              placeholder="Selectionner la marque"
+              value={country}
+              options={data}
+              onChange={handleCountryChange}
+              getOptionLabel={(x) => x.car}
+              getOptionValue={(x) => x.car_code}
+            />
 
-          <b>Model</b>
-          <Select
-            placeholder="Selectionner le modèl"
-            value={lang}
-            options={langList}
-            onChange={handleLanguageChange}
-            getOptionLabel={(x) => x.name}
-            getOptionValue={(x) => x.code}
-          />
-          <b>Motorisation</b>
-          <Select
-            placeholder="Selectionner la motorisation"
-            value={lang}
-            options={langList}
-            onChange={handleLanguageChange}
-            getOptionLabel={(x) => x.name}
-            getOptionValue={(x) => x.code}
-          />
+            <b>Model</b>
+            <Select
+              placeholder="Selectionner le modèl"
+              value={lang}
+              options={langList}
+              onChange={handleLanguageChange}
+              getOptionLabel={(x) => x.name}
+              getOptionValue={(x) => x.code}
+            />
+            <b>Motorisation</b>
+            <Select
+              placeholder="Selectionner la motorisation"
+              value={lang}
+              options={langList}
+              onChange={handleLanguageChange}
+              getOptionLabel={(x) => x.name}
+              getOptionValue={(x) => x.code}
+            />
+          </div>
+          <button>VALIDER</button>
         </div>
-        <button>VALIDER</button>
+        <div>
+          <CarouselApp />
+        </div>
       </SelectCar>
     </SelectContainer>
   );

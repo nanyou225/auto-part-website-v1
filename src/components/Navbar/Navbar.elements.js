@@ -193,6 +193,9 @@ export const CatalogDiv = styled.div`
   .header-cat-text li:hover ul.dropdown {
     display: block;
     width: 78rem;
+    height: 78vh;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 `;
